@@ -66,18 +66,34 @@ images.forEach(img=>{
 });
 
 const aboutSwiper = new Swiper('.aboutSwiper', {
-  slidesPerView: 1.2, // Menampilkan 1 slide penuh dan sedikit slide berikutnya
-  spaceBetween: 16,
-  centeredSlides: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    // Jika diakses lewat laptop/desktop kembali normal (tidak digeser)
-    768: {
-      slidesPerView: 3,
-      centeredSlides: false,
+    effect: 'creative', // Mengaktifkan efek animasi kreatif
+    grabCursor: true,   // Mengubah kursor jadi tangan saat di-hover/geser
+    centeredSlides: true,
+    slidesPerView: 1.2,
+    spaceBetween: 20,
+    
+    // Pengaturan animasi kreatif saat digeser
+    creativeEffect: {
+        prev: {
+            translate: ['-120%', 0, -500], // Kartu sebelumnya tergeser ke kiri dengan efek 3D
+            opacity: 0.5,
+        },
+        next: {
+            translate: ['120%', 0, -500],  // Kartu berikutnya bersiap di kanan dengan efek 3D
+            opacity: 0.5,
+        },
+    },
+    
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    
+    breakpoints: {
+        768: {
+            slidesPerView: 3,
+            centeredSlides: false,
+            effect: 'slide', // Kembali normal (geser biasa) jika di laptop/desktop
+        }
     }
-  }
 });
