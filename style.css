@@ -1356,36 +1356,67 @@ body{
   }
 
   /* Kunci ukuran tiap card agar tidak gepeng saat digeser */
-/* 1. Perbesar ukuran area Swiper agar card-nya jadi lebih besar */
-    .aboutSwiper {
-        width: 95% !important;     /* Lebar diperbesar dari sebelumnya */
-        max-width: 350px !important;  /* Sesuaikan ukuran maksimal card */
-        margin: 0 auto !important;
-    }
+.anggotaSwiper{
+    width:980px !important;
+    height:480px !important;
+}
 
-    /* 2. Perbesar ukuran card/slide di dalamnya */
-    .aboutSwiper .swiper-slide {
-        width: 100% !important;
-        height: auto !important;
-    }
+.aboutSwiper{
+    width:380px !important;
+    height:380px !important;
+    margin:40px auto;
+}
 
-    .about-card, .inti-card {
-        width: 100% !important;
-        min-height: 280px !important; /* Tinggi card dibesarkan */
-        padding: 20px !important;
-    }
+.aboutSwiper .swiper-slide{
 
-    /* 3. Menghilangkan atau mengecilkan bayangan persegi panjang di belakang */
-    .swiper-cards .swiper-slide {
-        /* Mengatur ulang efek tumpuk card di belakang agar tidak terlalu melebar */
-        transform-origin: center bottom !important;
-    }
+    width:380px !important;
+    height:380px !important;
+
+    border-radius:25px;
+
+}
+
+.about-card{
+
+    width:100%;
+    height:100%;
+
+    padding:30px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.aboutSwiper .swiper-slide-active{
+
+    transform:scale(1.05);
+
+}
+
+.aboutSwiper .swiper-slide-prev{
+
+    opacity:.6;
+
+}
+
+.aboutSwiper .swiper-slide-next{
+
+    opacity:.6;
+
+}
     
-    /* Jika ingin bayangan/kartu di belakangnya benar-benar disembunyikan dan cuma sisa 1 kartu utama */
-    .swiper-cards .swiper-slide:not(.swiper-slide-active) {
-        opacity: 0 !important; /* Menyembunyikan kartu di belakangnya */
-        pointer-events: none !important;
-    }
 .inti{
     display:flex;
     flex-wrap:nowrap !important;
