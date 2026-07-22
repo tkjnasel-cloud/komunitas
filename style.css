@@ -304,6 +304,26 @@ section{
     right:-100px;
 }
 
+/* Sesuaikan class container pembungkus Profil, Visi, Misi Anda */
+.about-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Sembunyikan scrollbar jika ingin lebih rapi */
+.about-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Atur ukuran kartu agar pas saat digeser */
+.about-card {
+  flex: 0 0 85%; /* Lebar kartu 85% dari layar HP */
+  scroll-snap-align: center;
+}
 /*=========================
         JUDUL
 ==========================*/
