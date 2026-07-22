@@ -66,34 +66,13 @@ images.forEach(img=>{
 });
 
 const aboutSwiper = new Swiper('.aboutSwiper', {
-    effect: 'creative', // Mengaktifkan efek animasi kreatif
-    grabCursor: true,   // Mengubah kursor jadi tangan saat di-hover/geser
-    centeredSlides: true,
-    slidesPerView: 'auto', // PENTING: Biar ukuran card mengikuti CSS width di atas
-    spaceBetween: 20,
-    
-    // Pengaturan animasi kreatif saat digeser
-    creativeEffect: {
-        prev: {
-            translate: ['-120%', 0, -500], // Kartu sebelumnya tergeser ke kiri dengan efek 3D
-            opacity: 0.5,
-        },
-        next: {
-            translate: ['120%', 0, -500],  // Kartu berikutnya bersiap di kanan dengan efek 3D
-            opacity: 0.5,
-        },
+    effect: 'cards', // Mengaktifkan efek kartu bertumpuk
+    grabCursor: true,  // Kursor berubah jadi tangan saat di-hover/geser
+    cardsEffect: {
+        slideShadows: true, // Menambahkan efek bayangan 3D antar kartu
     },
-    
     pagination: {
         el: '.swiper-pagination',
-        clickable: true,
+        clickable: true, // Bisa diklik titik-titiknya untuk ganti kartu
     },
-    
-    breakpoints: {
-        768: {
-            slidesPerView: 3,
-            centeredSlides: false,
-            effect: 'slide', // Kembali normal (geser biasa) jika di laptop/desktop
-        }
-    }
 });
