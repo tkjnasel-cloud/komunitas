@@ -1355,24 +1355,32 @@ body{
       -webkit-overflow-scrolling: touch;
   }
 
-/* 1. Perkecil lebar area container Swiper agar berada di tengah */
+/* 1. Perbesar sedikit ukurannya agar pas dan ideal di HP */
     .aboutSwiper {
-        width: 75% !important;      /* Lebar pas di tengah layar HP */
-        max-width: 280px !important;  /* Batas maksimal agar tidak melebar */
-        height: 320px !important;   /* Tinggi proporsional */
+        width: 320px !important;    /* Ukuran ideal, tidak terlalu kecil/besar */
+        height: 380px !important;   /* Tinggi proporsional */
         margin: 0 auto !important;
+        left: 0 !important;
+        right: 0 !important;
     }
 
-    /* 2. Paksa setiap slide ikut mengecil, jangan biarkan melebar */
+    /* 2. Paksa wrapper dan slide agar posisinya benar-benar di tengah */
+    .aboutSwiper .swiper-wrapper {
+        transform: none !important;
+    }
+
     .aboutSwiper .swiper-slide {
-        width: 100% !important;
-        max-width: 280px !important;
+        width: 320px !important;
+        height: 380px !important;
         margin: 0 auto !important;
+        left: 0 !important;
+        right: 0 !important;
         display: flex !important;
         justify-content: center !important;
+        align-items: center !important;
     }
 
-    /* 3. Atur card di dalamnya agar solid, rapi, dan tidak transparan */
+    /* 3. Card utama solid, besar pas, dan tidak transparan */
     .aboutSwiper .about-card {
         width: 100% !important;
         height: 100% !important;
@@ -1380,8 +1388,8 @@ body{
         opacity: 1 !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
         border-radius: 16px !important;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
-        padding: 20px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+        padding: 25px !important;
         box-sizing: border-box !important;
     }
     
