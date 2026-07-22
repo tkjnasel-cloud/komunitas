@@ -1355,31 +1355,42 @@ body{
       -webkit-overflow-scrolling: touch;
   }
 
-/* 1. Atur lebar container Swiper agar tidak full satu layar */
+/* 1. Perkecil habis-habisan ukuran container Swiper */
     .aboutSwiper {
-        width: 80% !important;      /* Lebar 80% dari layar HP, jadi tidak terlalu lebar */
-        max-width: 260px !important;  /* Batas maksimal ukuran card */
-        height: 320px !important;   /* Tinggi proporsional persegi panjang */
-        margin: 0 auto !important;  /* Posisi pas di tengah */
+        width: 180px !important;    /* Lebar card diperkecil drastis */
+        height: 130px !important;   /* Tinggi card diperkecil jadi mungil */
+        margin: 0 auto !important;
     }
 
-    /* 2. Pastikan card di dalam swiper mengikuti ukuran container dengan solid */
+    /* 2. Kartu ikutan mungil dan solid */
     .aboutSwiper .about-card {
         width: 100% !important;
         height: 100% !important;
-        background-color: #0d1828 !important; /* Warna solid, tidak transparan */
+        background-color: #0d1828 !important;
         opacity: 1 !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 16px !important;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
-        padding: 20px !important;
+        border-radius: 12px !important;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important;
+        padding: 12px !important;
         box-sizing: border-box !important;
     }
 
-    /* 3. Biarkan slide menyesuaikan */
+    /* 3. Atur slide */
     .aboutSwiper .swiper-slide {
         width: 100% !important;
         height: 100% !important;
+    }
+
+    /* 4. Perkecil teks di dalam card agar muat */
+    .aboutSwiper .about-card p {
+        font-size: 9px !important;
+        line-height: 1.2 !important;
+        color: #ffffff !important;
+    }
+    .aboutSwiper .about-card h3 {
+        font-size: 12px !important;
+        color: #ffffff !important;
+        margin-bottom: 4px !important;
     }
     
 .inti{
