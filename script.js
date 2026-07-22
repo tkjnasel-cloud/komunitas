@@ -66,13 +66,13 @@ images.forEach(img=>{
 });
 
 const aboutSwiper = new Swiper('.aboutSwiper', {
-    effect: 'cards', // Mengaktifkan efek kartu bertumpuk
-    grabCursor: true,  // Kursor berubah jadi tangan saat di-hover/geser
+    effect: 'cards', // Ganti jadi cards
+    grabCursor: true,
     cardsEffect: {
-        slideShadows: true, // Menambahkan efek bayangan 3D antar kartu
+        slideShadows: true,
     },
     pagination: {
         el: '.swiper-pagination',
-        clickable: true, // Bisa diklik titik-titiknya untuk ganti kartu
+        clickable: true,
     },
 });
