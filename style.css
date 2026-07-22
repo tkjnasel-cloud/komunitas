@@ -1365,11 +1365,19 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    margin: 0 auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
     display: flex !important;
     justify-content: center !important;
+    transform: none !important; /* Mencegah bentrok dengan scale body */
+    
 }
 
+.aboutSwiper .swiper-slide {
+        text-align: center !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
 .inti{
     display:flex;
     flex-wrap:nowrap !important;
