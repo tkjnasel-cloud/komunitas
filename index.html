@@ -111,42 +111,49 @@ Lihat Struktur
 <!--================ TENTANG =================-->
 
 <section class="about" id="tentang">
-
     <div class="section-title">
         <h2>Tentang Komunitas</h2>
         <p>Mengenal lebih dekat komunitas kami.</p>
     </div>
 
-    <div class="about-container">
+    <!-- Tambahkan div swiper di sini -->
+    <div class="swiper aboutSwiper">
+        <div class="swiper-wrapper">
+            
+            <!-- Slide 1: Profil (Bungkus div-nya dengan swiper-slide) -->
+            <div class="swiper-slide">
+                <div class="about-card">
+                    <h3>Profil</h3>
+                    <p>Metro Crew merupakan komunitas pecinta teknologi untuk...</p>
+                </div>
+            </div>
 
-        <div class="about-card">
-            <h3>Profil</h3>
-            <p>
-                Metro Crew merupakan komunitas pecinta teknologi untuk 
-            </p>
+            <!-- Slide 2: Visi -->
+            <div class="swiper-slide">
+                <div class="about-card">
+                    <h3>Visi</h3>
+                    <p>Menjadi komunitas yang mewadahi siswa untuk belajar, berkembang, dan berinovasi di bidang IT.</p>
+                </div>
+            </div>
+
+            <!-- Slide 3: Misi -->
+            <div class="swiper-slide">
+                <div class="about-card">
+                    <h3>Misi</h3>
+                    <ul>
+                        <li>Mewadahi anggota untuk belajar dan berbagi ilmu IT.</li>
+                        <li>Mengembangkan keterampilan melalui praktik dan kolaborasi.</li>
+                        <li>Mengikuti perkembangan teknologi dan menerapkannya dalam pembelajaran.</li>
+                        <li>Menciptakan lingkungan yang mendukung pertumbuhan dan kreativitas anggota.</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
-
-        <div class="about-card">
-            <h3>Visi</h3>
-            <p>
-                Menjadi komunitas yang mewadahi siswa untuk belajar, berkembang, dan berinovasi di bidang IT.
-            </p>
-        </div>
-
-        <div class="about-card">
-            <h3>Misi</h3>
-
-            <ul>
-                <li>Mewadahi anggota untuk belajar dan berbagi ilmu IT.</li>
-                <li>Mengembangkan keterampilan melalui praktik dan kolaborasi.</li>
-                <li>Mengikuti perkembangan teknologi dan menerapkannya dalam pembelajaran.</li>
-                <li>Menciptakan lingkungan yang mendukung pertumbuhan dan kreativitas anggota.</li>
-            </ul>
-
-        </div>
-
+        
+        <!-- Opsional: Navigasi titik (pagination) di bawah -->
+        <div class="swiper-pagination"></div>
     </div>
-
 </section>
 
 <!--================ ANGGOTA =================-->
