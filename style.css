@@ -305,6 +305,7 @@ section{
 }
 
 
+
 /*=========================
         JUDUL
 ==========================*/
@@ -1329,10 +1330,11 @@ body{
     min-height:285vh;
 }
 
-.about-card{
-    width:380px !important;
-    min-width:380px !important;
-    min-height:260px !important;
+.about-card {
+    width: 100% !important;
+    max-width: 320px !important;  /* Atur lebar card */
+    min-height: 420px !important; /* Atur tinggi card agar jadi persegi panjang besar */
+    padding: 30px !important;     /* Jarak dalam card */
 }
 
     /* Tulisan Misi */
@@ -1346,10 +1348,6 @@ body{
         margin-bottom:10px;
     }
 
-    .about-card{
-    min-height: 400px;
-    padding: 20px;
-}
 
 /* Pembungkus agar bisa digeser horizontal */
   .about-container {
