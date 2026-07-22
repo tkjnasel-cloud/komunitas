@@ -1356,29 +1356,35 @@ body{
   }
 
   /* Kunci ukuran tiap card agar tidak gepeng saat digeser */
-
-.aboutSwiper {
-        width: 280px !important;    /* Batasi lebar container utama */
-        height: 380px !important;   /* Berikan tinggi tetap supaya berbentuk kartu besar */
-        margin: 0 auto !important;  /* Posisi pas di tengah */
+/* 1. Perbesar ukuran area Swiper agar card-nya jadi lebih besar */
+    .aboutSwiper {
+        width: 95% !important;     /* Lebar diperbesar dari sebelumnya */
+        max-width: 350px !important;  /* Sesuaikan ukuran maksimal card */
+        margin: 0 auto !important;
     }
 
-    /* 2. Biarkan card mengikuti ukuran container Swiper */
-    .aboutSwiper .about-card {
-        width: 100% !important;
-        height: 100% !important;
-        padding: 25px !important;
-        background: #0d1828 !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        border-radius: 16px !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
-        box-sizing: border-box !important;
-    }
-
-    /* 3. Atur slide agar posisinya pas di dalam container */
+    /* 2. Perbesar ukuran card/slide di dalamnya */
     .aboutSwiper .swiper-slide {
         width: 100% !important;
-        height: 100% !important;
+        height: auto !important;
+    }
+
+    .about-card, .inti-card {
+        width: 100% !important;
+        min-height: 280px !important; /* Tinggi card dibesarkan */
+        padding: 20px !important;
+    }
+
+    /* 3. Menghilangkan atau mengecilkan bayangan persegi panjang di belakang */
+    .swiper-cards .swiper-slide {
+        /* Mengatur ulang efek tumpuk card di belakang agar tidak terlalu melebar */
+        transform-origin: center bottom !important;
+    }
+    
+    /* Jika ingin bayangan/kartu di belakangnya benar-benar disembunyikan dan cuma sisa 1 kartu utama */
+    .swiper-cards .swiper-slide:not(.swiper-slide-active) {
+        opacity: 0 !important; /* Menyembunyikan kartu di belakangnya */
+        pointer-events: none !important;
     }
 .inti{
     display:flex;
