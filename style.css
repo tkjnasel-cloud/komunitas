@@ -1358,16 +1358,17 @@ body{
   /* Kunci ukuran tiap card agar tidak gepeng saat digeser */
 
 .aboutSwiper {
-        width: 100% !important;
-        max-width: 320px !important;
+        width: 85% !important;
+        max-width: 280px !important;
         margin: 0 auto !important;
     }
 
-    /* 2. Paksa card utama jadi besar */
+    /* 2. Kembalikan ukuran card ke bentuk proporsional (tidak memanjang ke bawah) */
     .aboutSwiper .about-card {
         width: 100% !important;
-        height: 380px !important;
-        padding: 25px !important;
+        height: auto !important;
+        min-height: 250px !important;
+        padding: 20px !important;
         background: #0d1828 !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 16px !important;
@@ -1375,19 +1376,12 @@ body{
         margin: 0 auto !important;
     }
 
-    /* 3. MATIKAN total kartu di belakang agar bayangan persegi panjang hilang */
-    .aboutSwiper .swiper-slide:not(.swiper-slide-active) {
-        transform: none !important;
-        opacity: 0 !important;
-        display: none !important;
+    /* 3. Hapus aturan slide yang bikin error tadi, biarkan efek bawaan swiper berjalan normal tapi tetap di tengah */
+    .aboutSwiper .swiper-slide {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
     }
-    
-    /* Pastikan slide aktif berada di tengah */
-    .aboutSwiper .swiper-slide-active {
-        transform: none !important;
-        opacity: 1 !important;
-    }
-}
 .inti{
     display:flex;
     flex-wrap:nowrap !important;
