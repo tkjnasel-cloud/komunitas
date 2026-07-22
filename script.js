@@ -66,11 +66,11 @@ images.forEach(img=>{
 });
 
 const aboutSwiper = new Swiper('.aboutSwiper', {
-    effect: 'cards', // Ganti jadi cards
+    slidesPerView: 1.15,
+    spaceBetween: 15,
+    centeredSlides: true,
+    loop: true,
     grabCursor: true,
-    cardsEffect: {
-        slideShadows: true,
-    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
