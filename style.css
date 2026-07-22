@@ -1355,42 +1355,34 @@ body{
       -webkit-overflow-scrolling: touch;
   }
 
-/* 1. Perkecil habis-habisan ukuran container Swiper */
+/* 1. Perkecil lebar area container Swiper agar berada di tengah */
     .aboutSwiper {
-        width: 180px !important;    /* Lebar card diperkecil drastis */
-        height: 130px !important;   /* Tinggi card diperkecil jadi mungil */
+        width: 75% !important;      /* Lebar pas di tengah layar HP */
+        max-width: 280px !important;  /* Batas maksimal agar tidak melebar */
+        height: 320px !important;   /* Tinggi proporsional */
         margin: 0 auto !important;
     }
 
-    /* 2. Kartu ikutan mungil dan solid */
+    /* 2. Paksa setiap slide ikut mengecil, jangan biarkan melebar */
+    .aboutSwiper .swiper-slide {
+        width: 100% !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    /* 3. Atur card di dalamnya agar solid, rapi, dan tidak transparan */
     .aboutSwiper .about-card {
         width: 100% !important;
         height: 100% !important;
-        background-color: #0d1828 !important;
+        background-color: #0d1828 !important; /* Warna solid */
         opacity: 1 !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
-        border-radius: 12px !important;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important;
-        padding: 12px !important;
+        border-radius: 16px !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
+        padding: 20px !important;
         box-sizing: border-box !important;
-    }
-
-    /* 3. Atur slide */
-    .aboutSwiper .swiper-slide {
-        width: 100% !important;
-        height: 100% !important;
-    }
-
-    /* 4. Perkecil teks di dalam card agar muat */
-    .aboutSwiper .about-card p {
-        font-size: 9px !important;
-        line-height: 1.2 !important;
-        color: #ffffff !important;
-    }
-    .aboutSwiper .about-card h3 {
-        font-size: 12px !important;
-        color: #ffffff !important;
-        margin-bottom: 4px !important;
     }
     
 .inti{
