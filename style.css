@@ -1330,13 +1330,6 @@ body{
     min-height:285vh;
 }
 
-.about-card {
-    width: 100% !important;
-    max-width: 300px !important;  
-    min-height: 400px !important; /* Membuat kartu jadi persegi panjang tinggi */
-    padding: 30px !important;     
-}
-
     /* Tulisan Misi */
     .about-card ul{
         padding-left:22px;
@@ -1363,14 +1356,16 @@ body{
   }
 
   /* Kunci ukuran tiap card agar tidak gepeng saat digeser */
-  .about-card {
-      flex: 0 0 350px !important;
-      width: 350px !important;
-      min-width: 350px !important;
-      min-height: 400px !important;
-      padding: 25px !important;
-      scroll-snap-align: center;
-  }
+/* Mengatur ukuran card agar jadi persegi panjang besar */
+.aboutSwiper .about-card {
+    width: 280px !important;    /* Lebar card */
+    height: 400px !important;   /* Tinggi card (persegi panjang) */
+    padding: 30px !important;
+    background: #0d1828 !important; /* Sesuaikan warna background card Anda */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
 .inti{
     display:flex;
