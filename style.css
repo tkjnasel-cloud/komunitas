@@ -1332,9 +1332,9 @@ body{
 
 .about-card {
     width: 100% !important;
-    max-width: 320px !important;  /* Atur lebar card */
-    min-height: 420px !important; /* Atur tinggi card agar jadi persegi panjang besar */
-    padding: 30px !important;     /* Jarak dalam card */
+    max-width: 300px !important;  
+    min-height: 400px !important; /* Membuat kartu jadi persegi panjang tinggi */
+    padding: 30px !important;     
 }
 
     /* Tulisan Misi */
