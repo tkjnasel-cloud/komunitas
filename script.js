@@ -64,3 +64,20 @@ images.forEach(img=>{
         };
     }
 });
+
+const aboutSwiper = new Swiper('.aboutSwiper', {
+  slidesPerView: 1.2, // Menampilkan 1 slide penuh dan sedikit slide berikutnya
+  spaceBetween: 16,
+  centeredSlides: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    // Jika diakses lewat laptop/desktop kembali normal (tidak digeser)
+    768: {
+      slidesPerView: 3,
+      centeredSlides: false,
+    }
+  }
+});
