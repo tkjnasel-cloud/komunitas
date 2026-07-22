@@ -1356,68 +1356,50 @@ body{
   }
 
   /* Kunci ukuran tiap card agar tidak gepeng saat digeser */
-.anggotaSwiper{
-    width:980px !important;
-    height:480px !important;
-}
+/* 1. Pastikan container swiper di tengah dan ukurannya pas */
+    .aboutSwiper {
+        width: 280px !important;
+        height: 380px !important;
+        margin: 0 auto !important;
+        overflow: visible !important; /* Penting: Jangan sembunyikan overflow agar card bisa besar */
+    }
 
-.aboutSwiper{
-    width:380px !important;
-    height:380px !important;
-    margin:40px auto;
-}
+    /* 2. Atur card utamanya (SOLID, tidak transparan) */
+    .aboutSwiper .about-card {
+        width: 100% !important;
+        height: 100% !important;
+        background-color: #0d1828 !important; /* Warna solid, tidak transparan */
+        opacity: 1 !important;               /* Paksa agar tidak transparan */
+        visibility: visible !important;      /* Paksa agar terlihat */
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 16px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+        padding: 25px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
 
-.aboutSwiper .swiper-slide{
+    /* 3. HILANGKAN TOTAL card di belakang agar bayangan persegi panjang hilang */
+    .aboutSwiper .swiper-slide:not(.swiper-slide-active) {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        display: none !important; /* Ini kunci untuk membuang bayangan aneh */
+    }
 
-    width:380px !important;
-    height:380px !important;
-
-    border-radius:25px;
-
-}
-
-.about-card{
-
-    width:100%;
-    height:100%;
-
-    padding:30px;
-
-    display:flex;
-    flex-direction:column;
-
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-
-    border-radius:25px;
-
-    background:#18253c;      /* tidak transparan */
-
-    border:1px solid rgba(255,255,255,.08);
-
-    box-sizing:border-box;
-
-}
-
-.aboutSwiper .swiper-slide-active{
-
-    transform:scale(1.05);
-
-}
-
-.aboutSwiper .swiper-slide-prev{
-
-    opacity:.6;
-
-}
-
-.aboutSwiper .swiper-slide-next{
-
-    opacity:.6;
-
-}
+    /* 4. Perbaiki teks agar masuk ke dalam card besar */
+    .aboutSwiper .about-card p {
+        font-size: 14px !important; /* Sedikit dibesarkan agar enak dibaca */
+        line-height: 1.5 !important;
+        color: white !important;
+        word-wrap: break-word !important;
+        margin-top: 10px !important;
+        max-height: none !important; /* Biarkan teks turun ke bawah */
+    }
+    .aboutSwiper .about-card h3 {
+        font-size: 20px !important;
+        color: white !important;
+        margin-bottom: 10px !important;
+    }
     
 .inti{
     display:flex;
