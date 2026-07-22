@@ -1355,19 +1355,19 @@ body{
       -webkit-overflow-scrolling: touch;
   }
 
-/* 1. Atur container swiper agar pas di tengah dan memberi ruang untuk card sebelah */
+/* 1. Paksa container Swiper jadi kecil dan di tengah */
     .aboutSwiper {
-        width: 85% !important;
-        max-width: 320px !important;
+        width: 280px !important;
         height: 340px !important;
         margin: 0 auto !important;
         overflow: visible !important;
     }
 
-    /* 2. Atur slide agar tampil dengan gaya tumpuk yang rapi */
+    /* 2. PAKSA SEMUA SLIDE AGAR TIDAK MELEBAR JADI 893PX */
     .aboutSwiper .swiper-slide {
-        width: 100% !important;
-        height: 100% !important;
+        width: 280px !important;
+        max-width: 280px !important;
+        margin: 0 auto !important;
     }
 
     /* 3. Atur card utama agar solid, tidak transparan, dan ukurannya pas */
@@ -1378,12 +1378,11 @@ body{
         opacity: 1 !important;
         border: 1px solid rgba(255, 255, 255, 0.15) !important;
         border-radius: 16px !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6) !important;
         padding: 24px !important;
         box-sizing: border-box !important;
         display: flex !important;
         flex-direction: column !important;
-        justify-content: flex-start !important;
     }
 
     /* 4. Perjelas teks di dalam card */
