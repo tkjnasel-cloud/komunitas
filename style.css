@@ -1358,8 +1358,8 @@ body{
 /* 1. Perbesar area container Swiper di HP */
     .aboutSwiper {
         width: 85% !important;
-        max-width: 300px !important;
-        height: 380px !important;
+        max-width: 240px !important;
+        height: 290px !important;
         margin: 0 auto !important;
     }
 
