@@ -1355,50 +1355,42 @@ body{
       -webkit-overflow-scrolling: touch;
   }
 
-  /* Kunci ukuran tiap card agar tidak gepeng saat digeser */
-/* 1. Pastikan container swiper di tengah dan ukurannya pas */
+/* 1. Perbesar area container Swiper di HP */
     .aboutSwiper {
-        width: 280px !important;
+        width: 85% !important;
+        max-width: 300px !important;
         height: 380px !important;
         margin: 0 auto !important;
-        overflow: visible !important; /* Penting: Jangan sembunyikan overflow agar card bisa besar */
     }
 
-    /* 2. Atur card utamanya (SOLID, tidak transparan) */
+    /* 2. Buat card utamanya besar dan SOLID (tidak transparan) */
     .aboutSwiper .about-card {
         width: 100% !important;
         height: 100% !important;
-        background-color: #0d1828 !important; /* Warna solid, tidak transparan */
-        opacity: 1 !important;               /* Paksa agar tidak transparan */
-        visibility: visible !important;      /* Paksa agar terlihat */
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        background-color: #0d1828 !important; /* Warna background solid */
+        opacity: 1 !important;               /* Pastikan tidak tembus pandang */
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
         border-radius: 16px !important;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
         padding: 25px !important;
-        display: flex !important;
-        flex-direction: column !important;
+        box-sizing: border-box !important;
     }
 
-    /* 3. HILANGKAN TOTAL card di belakang agar bayangan persegi panjang hilang */
-    .aboutSwiper .swiper-slide:not(.swiper-slide-active) {
-        opacity: 0 !important;
-        visibility: hidden !important;
-        display: none !important; /* Ini kunci untuk membuang bayangan aneh */
+    /* 3. Atur slide agar efek kartu remi tetap jalan dengan baik */
+    .aboutSwiper .swiper-slide {
+        width: 100% !important;
+        height: 100% !important;
     }
 
-    /* 4. Perbaiki teks agar masuk ke dalam card besar */
+    /* 4. Perjelas teks di dalam card */
     .aboutSwiper .about-card p {
-        font-size: 14px !important; /* Sedikit dibesarkan agar enak dibaca */
+        font-size: 13px !important;
         line-height: 1.5 !important;
-        color: white !important;
-        word-wrap: break-word !important;
-        margin-top: 10px !important;
-        max-height: none !important; /* Biarkan teks turun ke bawah */
+        color: #ffffff !important;
     }
     .aboutSwiper .about-card h3 {
-        font-size: 20px !important;
-        color: white !important;
-        margin-bottom: 10px !important;
+        font-size: 18px !important;
+        color: #ffffff !important;
     }
     
 .inti{
