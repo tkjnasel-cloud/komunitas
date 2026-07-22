@@ -69,7 +69,7 @@ const aboutSwiper = new Swiper('.aboutSwiper', {
     effect: 'creative', // Mengaktifkan efek animasi kreatif
     grabCursor: true,   // Mengubah kursor jadi tangan saat di-hover/geser
     centeredSlides: true,
-    slidesPerView: 1.2,
+    slidesPerView: 'auto', // PENTING: Biar ukuran card mengikuti CSS width di atas
     spaceBetween: 20,
     
     // Pengaturan animasi kreatif saat digeser
