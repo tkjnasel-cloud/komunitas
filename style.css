@@ -1357,12 +1357,17 @@ body{
 
   /* Kunci ukuran tiap card agar tidak gepeng saat digeser */
 
+.aboutSwiper {
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+    }
 
-    /* 2. Atur card di dalam swiper */
+    /* 2. Paksa card utama jadi besar */
     .aboutSwiper .about-card {
         width: 100% !important;
-        height: 350px !important;
-        padding: 20px !important;
+        height: 380px !important;
+        padding: 25px !important;
         background: #0d1828 !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 16px !important;
@@ -1370,10 +1375,17 @@ body{
         margin: 0 auto !important;
     }
 
-    /* 3. Hilangkan bayangan/kartu lain di belakang (efek cards swiper) */
-    .swiper-cards .swiper-slide:not(.swiper-slide-active) {
+    /* 3. MATIKAN total kartu di belakang agar bayangan persegi panjang hilang */
+    .aboutSwiper .swiper-slide:not(.swiper-slide-active) {
+        transform: none !important;
         opacity: 0 !important;
-        pointer-events: none !important;
+        display: none !important;
+    }
+    
+    /* Pastikan slide aktif berada di tengah */
+    .aboutSwiper .swiper-slide-active {
+        transform: none !important;
+        opacity: 1 !important;
     }
 }
 .inti{
