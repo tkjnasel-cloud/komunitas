@@ -1356,28 +1356,26 @@ body{
   }
 
   /* Kunci ukuran tiap card agar tidak gepeng saat digeser */
-/* Mengatur ukuran card agar jadi persegi panjang besar */
-.aboutSwiper .about-card {
-    width: 280px !important;    /* Lebar card */
-    height: 400px !important;   /* Tinggi card (persegi panjang) */
-    padding: 30px !important;
-    background: #0d1828 !important; /* Sesuaikan warna background card Anda */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: flex !important;
-    justify-content: center !important;
-    transform: none !important; /* Mencegah bentrok dengan scale body */
-    
-}
 
-.aboutSwiper .swiper-slide {
-        text-align: center !important;
-        display: flex !important;
-        justify-content: center !important;
+
+    /* 2. Atur card di dalam swiper */
+    .aboutSwiper .about-card {
+        width: 100% !important;
+        height: 350px !important;
+        padding: 20px !important;
+        background: #0d1828 !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 16px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+        margin: 0 auto !important;
     }
+
+    /* 3. Hilangkan bayangan/kartu lain di belakang (efek cards swiper) */
+    .swiper-cards .swiper-slide:not(.swiper-slide-active) {
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+}
 .inti{
     display:flex;
     flex-wrap:nowrap !important;
