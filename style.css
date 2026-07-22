@@ -1357,8 +1357,8 @@ body{
 
 /* 1. Atur container agar menjadi persegi sempurna */
     .aboutSwiper {
-        width: 240px !important;    /* Lebar kotak */
-        height: 240px !important;   /* Tinggi kotak dibuat sama persis -> PERSEGI */
+        width: 140px !important;    /* Lebar kotak */
+        height: 140px !important;   /* Tinggi kotak dibuat sama persis -> PERSEGI */
         margin: 0 auto !important;  /* Posisi di tengah */
         overflow: visible !important;
     }
