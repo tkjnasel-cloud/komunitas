@@ -1343,18 +1343,20 @@ body{
 
 
 /* Pembungkus agar bisa digeser horizontal */
-  .about-container {
+.about-container {
       display: flex !important;
       flex-wrap: nowrap !important;
-      gap: 20px !important;
-      justify-content: flex-start !important;
-      overflow-x: auto !important; /* Kunci fitur geser */
+      gap: 25px !important;
+      justify-content: flex-start !important; /* Biar mulai dari kiri tapi bisa digeser */
+      align-items: center !important;
+      overflow-x: auto !important;
       overflow-y: hidden !important;
-      padding: 10px 20px 30px !important;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
+      width: 100% !important;
+      max-width: 1200px !important;
+      margin: 0 auto !important;
+      padding: 10px 40px 30px 40px !important; /* Tambah padding kiri & kanan jadi 40px */
+      box-sizing: border-box !important;
   }
-
 /* Lebarkan container Swiper biar card punya ruang */
     .aboutSwiper {
         width: 100% !important;
