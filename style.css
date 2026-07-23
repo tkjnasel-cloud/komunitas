@@ -1342,29 +1342,25 @@ body{
     }
 
 
-/* Pembungkus agar bisa digeser horizontal */
 .about-container {
       display: flex !important;
       flex-wrap: nowrap !important;
-      gap: 25px !important;
-      justify-content: flex-start !important; /* Biar mulai dari kiri tapi bisa digeser */
-      align-items: center !important;
+      gap: 20px !important;
+      justify-content: center !important; /* Paksa isi card kumpul di tengah */
+      align-items: stretch !important;
       overflow-x: auto !important;
       overflow-y: hidden !important;
       width: 100% !important;
       max-width: 1200px !important;
-      margin: 0 auto !important;
-      padding: 10px 40px 30px 40px !important; /* Tambah padding kiri & kanan jadi 40px */
+      margin: 0 auto !important;         /* Mengunci posisi kontainer agar di tengah */
+      padding: 10px 20px 30px 20px !important;
       box-sizing: border-box !important;
   }
-    /* Memberikan jarak khusus di sebelah kiri card pertama */
-  .about-container .about-card:first-child {
-      margin-left: 30px !important;
-  }
 
-  /* Memberikan jarak juga di sebelah kanan card terakhir biar seimbang */
-  .about-container .about-card:last-child {
-      margin-right: 30px !important;
+  .about-card {
+      min-width: 340px !important;
+      width: 340px !important;
+      flex-shrink: 0 !important;
   }
 
     
