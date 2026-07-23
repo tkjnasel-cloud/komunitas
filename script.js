@@ -65,14 +65,4 @@ images.forEach(img=>{
     }
 });
 
-const aboutSwiper = new Swiper('.aboutSwiper', {
-    slidesPerView: 1.15,
-    spaceBetween: 15,
-    centeredSlides: true,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-});
+
